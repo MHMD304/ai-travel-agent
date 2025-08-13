@@ -30,7 +30,7 @@ An intelligent travel planning application that uses AI to generate personalized
 ![Mobile View](screenshots/mobile-results.png)
 *Perfect experience on all devices - mobile, tablet, and desktop*
 ### Project Certificate
-![Coursera Certificate](screenshots/Coursera PMUGP34KK16W.pdf)
+![Coursera Certificate](screenshots/Coursera-PMUGP34KK16W.pdf)
 *Certificate of completion for "Build an AI Travel Agent App with OpenAI" project on Coursera*
 
 ## 🛠️ Technology Stack
