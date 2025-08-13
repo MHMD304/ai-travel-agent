@@ -48,7 +48,7 @@ An intelligent travel planning application that uses AI to generate personalized
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/ai-travel-agent.git
+   git clone https://github.com/MHMD304/ai-travel-agent
    cd ai-travel-agent
    ```
 
