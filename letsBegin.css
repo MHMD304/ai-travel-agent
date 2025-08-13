@@ -1,0 +1,109 @@
+body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 20px auto;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+    .travellers {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+    }
+    .signs {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      background: #4BDCB0;
+      color: white;
+    }
+    .signs:hover {
+      background: #3bc49e;
+      transform: scale(1.1);
+    }
+    #travellersCount {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+    .flying {
+      border: none;
+      outline: none;
+      text-align: center;
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+    }
+    #planBtn {
+      background: #4BDCB0;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 20px;
+      width: 100%;
+    }
+    #planBtn:hover {
+      background: #3bc49e;
+      
+      transform: translateY(-2px);
+      
+    }
+    #planBtn:disabled {
+      background: #ccc;
+      transform: none;
+    }
+    #output {
+      background: #f8f9fa;
+      border: 2px solid #e9ecef;
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 20px;
+      white-space: pre-wrap;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .result-section {
+      background: #BBF7F7;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+    }
+    .result-section h4 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .error {
+      color: #dc3545;
+      font-weight: bold;
+    }
+    .success {
+      color: #28a745;
+    }
+    .input-section {
+      margin: 20px 0;
+    }
+    .input-section p {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .input-container {
+      border-radius: 20px;
+      border: 2px solid #ddd;
+      padding: 5px;
+      background: white;
+    }
+    .input-container:focus-within {
+      border-color: #4BDCB0;
+    }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Trip Data</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 10px 20px; margin: 5px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .data-display { background: #f8f9fa; padding: 10px; border-radius: 5px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Test Trip Data Display</h1>
+    
+    <div class="test-section">
+        <h3>Test Data Structure</h3>
+        <button onclick="testSampleData()">Load Sample Data</button>
+        <button onclick="testStoredData()">Show Stored Data</button>
+        <button onclick="clearData()">Clear Data</button>
+        <button onclick="goToTrip()">Go to Trip Page</button>
+    </div>
+
+    <div class="test-section">
+        <h3>Current Data in localStorage:</h3>
+        <div id="current-data" class="data-display">No data</div>
+    </div>
+
+    <div class="test-section">
+        <h3>Sample Data Structure:</h3>
+        <div id="sample-data" class="data-display">Click "Load Sample Data" to see sample structure</div>
+    </div>
+
+    <script>
+        function testSampleData() {
+            const sampleData = {
+                trip: {
+                    travellers: 2,
+                    from: "New York",
+                    to: "Paris",
+                    dates: {
+                        from: "2025-06-15",
+                        to: "2025-06-22"
+                    },
+                    budget: "$3000"
+                },
+                weather: "Sunny with occasional clouds, temperatures 18-25°C",
+                flight: {
+                    departure: {
+                        from: "New York",
+                        to: "Paris",
+                        airline: "Air France",
+                        flightNumber: "AF123",
+                        price: "850"
+                    }
+                },
+                hotel: {
+                    name: "Hotel de Paris",
+                    totalHotelCost: "1200"
+                }
+            };
+
+            localStorage.setItem("tripPlan", JSON.stringify({ travelPlan: sampleData }));
+            document.getElementById("current-data").innerHTML = "<pre>" + JSON.stringify(sampleData, null, 2) + "</pre>";
+            document.getElementById("sample-data").innerHTML = "<pre>" + JSON.stringify(sampleData, null, 2) + "</pre>";
+        }
+
+        function testStoredData() {
+            const stored = localStorage.getItem("tripPlan");
+            if (stored) {
+                try {
+                    const parsed = JSON.parse(stored);
+                    document.getElementById("current-data").innerHTML = "<pre>" + JSON.stringify(parsed, null, 2) + "</pre>";
+                } catch (e) {
+                    document.getElementById("current-data").innerHTML = "Error parsing stored data: " + e.message;
+                }
+            } else {
+                document.getElementById("current-data").innerHTML = "No data stored";
+            }
+        }
+
+        function clearData() {
+            localStorage.removeItem("tripPlan");
+            document.getElementById("current-data").innerHTML = "Data cleared";
+        }
+
+        function goToTrip() {
+            window.location.href = "trip.html";
+        }
+
+        // Show current data on load
+        testStoredData();
+    </script>
+</body>
+</html> 

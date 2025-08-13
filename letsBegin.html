@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Travel Planner</title>
+  <link rel="stylesheet" href="letsBegin.css">
+</head>
+<body>
+<div class="container">
+  <div class="text-center mb-4">
+    <h2 style="color: #333; margin-bottom: 30px;"> Travel Planner</h2>
+  </div>
+
+  <div class="text-center travellers">
+    <p>Number of Travellers</p>
+  </div>
+  <div class="input-container">
+    <div class="row">
+      <div class="col-4 p-1 d-flex justify-content-center align-items-center">
+        <button class="btn signs" id="minusBtn">-</button>
+      </div>
+      <div class="col-4 p-1 d-flex justify-content-center align-items-center">
+        <span id="travellersCount">1</span>
+      </div>
+      <div class="col-4 p-1 d-flex justify-content-center align-items-center">
+        <button class="btn signs" id="plusBtn">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-section">
+    <div class="text-center"><p>Flying from</p></div>
+    <div class="input-container">
+      <input id="flying-from" type="text" class="flying" placeholder="e.g., New York" />
+    </div>
+  </div>
+
+  <div class="input-section">
+    <div class="text-center"><p>Flying to</p></div>
+    <div class="input-container">
+      <input id="flying-to" type="text" class="flying" placeholder="e.g., Paris" />
+    </div>
+  </div>
+
+  <div class="input-section">
+    <div class="text-center"><p>From date</p></div>
+    <div class="input-container">
+      <input type="date" id="date-from" class="flying" />
+    </div>
+  </div>
+
+  <div class="input-section">
+    <div class="text-center"><p>To date</p></div>
+    <div class="input-container">
+      <input type="date" id="date-to" class="flying" />
+    </div>
+  </div>
+
+  <div class="input-section">
+    <div class="text-center"><p>Budget</p></div>
+    <div class="input-container">
+      <input type="text" id="budget" class="flying" placeholder="e.g., $2000" />
+    </div>
+  </div>
+
+  <div class="mt-4 mb-4">
+    <button type="button" class="btn" id="planBtn">Plan my trip</button>
+  </div>
+
+  <div id="output" class="mt-3 text-center text-danger"></div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
